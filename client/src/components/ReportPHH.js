@@ -46,6 +46,7 @@ const ReportPHH = (props) => {
             {/* HHW */}
             <DataPointSummary
                 title="Heat & Hot Water"
+                textColor="#2B4162"
                 redFlag={hhwRedFlag}
                 titleSizeOverride = "5vh"
                 bodyText= {hhwRedFlag //update for HHW

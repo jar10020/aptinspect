@@ -7,10 +7,10 @@ import { createTheme, ThemeProvider, styled } from '@mui/material/styles';
 import MainHeader from "./components/MainHeader.js";
 import AddressForm from "./components/AddressForm.js"
 import FormSnackbar from './components/FormSnackbar';
-import ReportPests from './components/ReportPests.js';
 import ReportHeader from './components/ReportHeader.js';
 import fetchPHH from './components/fetchBuildingData.js';
 import ReportPHH from './components/ReportPHH.js';
+import ReportConstruction from './components/ReportConstruction.js';
 
 
 import { bgcolor } from '@mui/system';
@@ -58,13 +58,20 @@ const App = () => {
             console.log("required fields filled");
             //test log
             console.log("Selected boro is "+ borough+ " and address text is "+ address);
+            //handle loading and submitted states
             setSubmitted(true);
             setLoading(true);
             setSubmittedAddress(address);
             setSubmittedBorough(borough);
+            //request and set data
             setPhhData(await fetchPHH({address: address, borough: borough}));
+            //once we get data, unset loading state and set finalized loaded state
+            //everything from the API should be receieved at this point
             setLoading(false);
             setLoaded(true);
+            //auto scroll to report
+            const element = document.getElementById("reportScrollAnchor");
+            element.scrollIntoView({ behavior: "smooth" });
         } else {
             setSnackbarNotif({
                 open: true,
@@ -108,11 +115,12 @@ const App = () => {
             </Container>
 
             {loaded ? (
-                <>
+                <div id="reportScrollAnchor">
                     <ReportHeader/>
                     {/* <ReportPests data={phhData}/> */}
                     <ReportPHH data={phhData}/>
-                </>
+                    {/* <ReportConstruction/> */}
+                </div>
             ) : (
                 null
             )}

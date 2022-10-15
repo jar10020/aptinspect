@@ -2,7 +2,7 @@ import React from "react";
 
 import { Box, Button, createTheme, Container, Typography, Grid, ThemeProvider } from "@mui/material";
 
-const DataPointSummary = (props) => { //str bodyText, str title, bool redflag, str titleSizeOverride
+const DataPointSummary = (props) => { //str bodyText, str title, bool redflag, str titleSizeOverride, str textColor
 
     return (
         <Grid
@@ -29,7 +29,7 @@ const DataPointSummary = (props) => { //str bodyText, str title, bool redflag, s
                             fontFamily={"Libre Franklin"}
                             fontWeight="900"
                             letterSpacing={"-0.1rem"}
-                            sx={{ color: "#2B4162" }}
+                            sx={{ color: props.textColor }}
                         >
                             {props.title}
                         </Typography>
@@ -51,7 +51,7 @@ const DataPointSummary = (props) => { //str bodyText, str title, bool redflag, s
                 sx={{ pt: "1vh" }}
             >
                 {/* INFO DESCRIPTION (PARAGRAPH ETC.) */}
-                <Typography fontSize="2vh" fontFamily={"Libre Franklin"} fontWeight="500">
+                <Typography fontSize="2vh" fontFamily={"Libre Franklin"} fontWeight="500" sx={{ color: props.textColor }}>
                     {props.bodyText}
                 </Typography>
             </Grid>
