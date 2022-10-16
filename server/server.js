@@ -19,7 +19,11 @@ app.use("/api/queens", require("./routes/queensRoutes"));
 app.use("/api/bronx", require("./routes/bronxRoutes"));
 
 
-
+const path = require("path");
+app.use(express.static(path.resolve(__dirname, "./client/build")));
+app.get("*", function(request, response) {
+    response.sendFile(path.resolve(__dirname, "./client/build", "index.html"));
+});
 
 
 app.listen(port, () => console.log(`Server started on port ${port}`));
