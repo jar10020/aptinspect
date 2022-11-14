@@ -57,9 +57,7 @@ const DataPointSummary = (props) => { //str bodyText, str title, bool redflag, s
             </Grid>
 
             {/* experimental: button to see table of reports (in popup diaglogue) 
-                *** obviously will only appear if there is data to show. should implement
-                *** if i have extra time tbh but probably wont get around to it lol. maybe
-                *** something to implement after sending resumes out?
+                *** obviously will only appear if there is data to show.
                 */}
             {/* <Grid item align="center">
                 <ThemeProvider theme={theme}>
