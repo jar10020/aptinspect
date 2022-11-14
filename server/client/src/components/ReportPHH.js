@@ -35,7 +35,9 @@ const ReportPHH = (props) => {
             {/* PESTS (roaches & mice) */}
             <DataPointSummary
                 title="Pests"
+                textColor="#2B4162"
                 redFlag={pestsRedFlag}
+                titleSizeOverride = "5vh"
                 bodyText= {pestsRedFlag
                     ?
                     "This building has had "+ numPestReports+ " recent pest reports filed with the NYC Department of Housing Preservation and Development since 2011. These reports are filed by tenants, and indicate a problem severe enough for tenants to contact city authorities."
