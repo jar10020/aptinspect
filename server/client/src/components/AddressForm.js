@@ -28,7 +28,7 @@ const AddressForm = ({ handleSubmit, handleAddressChange, handleBoroughChange, b
             component="form"
             noValidate
             autoComplete="off"
-            sx={{bgcolor: "#F5F0F6", borderRadius: "1rem", px: "1rem", pt: "0.5rem", pb: "1.5rem"}}
+            sx={{bgcolor: "#F5F0F6", borderRadius: "1rem", px: "1rem", pt: "0.5rem", pb: "1.5rem", boxShadow: "0px 0px 4px 0px rgba(134, 172, 116, 1)"}}
         >
             {/*error snackbar */}
             <FormSnackbar
@@ -42,7 +42,7 @@ const AddressForm = ({ handleSubmit, handleAddressChange, handleBoroughChange, b
                 fontWeight="900"
                 fontSize="1rem"
                 color= "#2B4162"
-                letterSpacing={"-0.03rem"}
+                letterSpacing={"-0.00rem"}
                 sx={{ pb: "0.5rem" }}
             >
                 Find your building
