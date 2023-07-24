@@ -6,7 +6,7 @@ const queensPHHData = require("../models/queensPHHModel")
 const getQueensPHHData = asyncHandler( async (req, res) => {
     const reqAddress = req.params.address;
 
-    ///console.log("["+ reqAddress+ "]");
+    console.log("["+ reqAddress+ "]");
 
     const buildingInfo = await queensPHHData.find({"Incident Address": reqAddress});
 

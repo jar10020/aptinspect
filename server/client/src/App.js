@@ -69,6 +69,7 @@ const App = () => {
             //everything from the API should be receieved at this point
             setLoading(false);
             setLoaded(true);
+            setSubmitted(false);
             //auto scroll to report
             const element = document.getElementById("reportScrollAnchor");
             element.scrollIntoView({ behavior: "smooth" });
