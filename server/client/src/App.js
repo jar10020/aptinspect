@@ -14,6 +14,7 @@ import ReportConstruction from './components/ReportConstruction.js';
 
 
 import { bgcolor } from '@mui/system';
+import NeighborhoodView from './components/NeighborhoodView.js';
 
 const App = () => {
 
@@ -120,7 +121,12 @@ const App = () => {
                     <ReportHeader/>
                     {/* <ReportPests data={phhData}/> */}
                     <ReportPHH data={phhData}/>
-                    {/* <ReportConstruction/> */}
+                    
+                    {/* neighborhood report / map view */}
+
+                    {/* <NeighborhoodView/> */}
+
+
                 </div>
             ) : (
                 null
