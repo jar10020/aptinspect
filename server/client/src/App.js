@@ -14,6 +14,7 @@ import ReportConstruction from './components/ReportConstruction.js';
 
 
 import { bgcolor } from '@mui/system';
+import NeighborhoodView from './components/NeighborhoodView.js';
 
 const App = () => {
 
@@ -69,6 +70,7 @@ const App = () => {
             //everything from the API should be receieved at this point
             setLoading(false);
             setLoaded(true);
+            setSubmitted(false);
             //auto scroll to report
             const element = document.getElementById("reportScrollAnchor");
             element.scrollIntoView({ behavior: "smooth" });
@@ -119,7 +121,12 @@ const App = () => {
                     <ReportHeader/>
                     {/* <ReportPests data={phhData}/> */}
                     <ReportPHH data={phhData}/>
-                    {/* <ReportConstruction/> */}
+                    
+                    {/* neighborhood report / map view */}
+
+                    {/* <NeighborhoodView/> */}
+
+
                 </div>
             ) : (
                 null

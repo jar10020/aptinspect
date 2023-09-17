@@ -45,7 +45,7 @@ const bronxPHHSchema = mongoose.Schema(
         "Location": String
     },
     {
-        collection: "Reports-Bronx-PHH",
+        collection: "Bronx_311PestsHeatHotWater",
     }
 );
 
