@@ -3,7 +3,7 @@ import React from "react";
 import { Box, Button, createTheme, Container, Typography, Grid, ThemeProvider } from "@mui/material";
 import DataPointSummary from "./DataPointSummary";
 
-const NeighborhoodView = () => {
+const NeighborhoodView = (props) => {
 
 
     return(
@@ -38,7 +38,6 @@ const NeighborhoodView = () => {
                     </Grid>
                 </Grid>
 
-            </Grid>
         </Container>
     )
 }
